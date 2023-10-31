@@ -1,0 +1,71 @@
+img {
+  width: 200px;
+  background-color: crimson;
+}
+
+h1 {
+  color: brown;
+}
+
+#titulo {
+  width: 80%;
+  font-size: 35pt;
+  height: 150px;
+  color: coral;
+  text-align: center;
+  border-radius: 20px;
+  /*
+  background-color: violet;
+  background-image: url(https://humanidades.com/wp-content/uploads/2016/09/cordillera-de-los-andes-e1560489279388.jpg);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center;
+  */
+  background: violet url(https://humanidades.com/wp-content/uploads/2016/09/cordillera-de-los-andes-e1560489279388.jpg) no-repeat center;
+}
+
+li {
+  width: 400px;
+  background-color: aqua;
+  color: darkslategray;
+}
+
+ul, .menu {
+  text-align: center;
+}
+
+#text {
+  width: 50%;
+  height: 12rem;
+  overflow: scroll;
+  text-align: justify;
+}
+
+li.amarillo {
+  color: yellow;
+  text-decoration: underline;
+}
+
+li:hover {
+  color: orangered;
+}
+
+.negrita {
+  font-weight: bolder;
+}
+
+.italica {
+  font-style: italic;
+}
+
+table {
+  border: 3px solid red;
+}
+table th {
+  font-weight: bold;
+}
+table th, table td {
+  text-align: center;
+  width: 100px;
+  border: 2px solid #aaa;
+}

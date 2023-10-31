@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog Personal</title>
+  <!-- Acá vamos a importar una hoja de estilos CSS Externa -->
+  <link rel="stylesheet" href="externos/estilos.css">
+  <!-- Acá definimos nuestros estilos internos -->
+  <style>
+    h1 {
+      color: blue;
+    }
+    
+  </style>
+</head>
+<body>
+  <h1 id="titulo">Michael Jordan</h1>
+  <h1 style="color: orangered">Jugador de Basketball</h1>
+  <img src="https://cdn.nba.com/headshots/nba/latest/1040x760/893.png" alt="Foto">
+  <div id="text">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore quos optio officia animi, provident impedit quia delectus! Explicabo molestiae non, ex atque ipsa fugiat dolores labore, quis debitis voluptas hic?</p>
+    <p class="negrita">Itaque, maiores hic ea quasi, exercitationem vitae molestiae, aperiam blanditiis harum fuga maxime mollitia perspiciatis. Dolores, dolorum maiores nihil temporibus odit provident iusto reiciendis recusandae ea mollitia, et quod excepturi.</p>
+    <p class="italica">Aliquam, deserunt odit repudiandae tempore ad reiciendis adipisci corporis error eos blanditiis molestiae inventore porro voluptatem nisi fuga corrupti aliquid quidem, autem ipsum maiores. Ex debitis nihil iste unde libero!</p>
+  </div>
+  <br>
+  <table>
+    <thead>
+      <tr>
+        <th>Año</th>
+        <th>PPG</th>
+        <th>MVP?</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1990-91</td>
+        <td>31.5</td>
+        <td>Sí</td>
+      </tr>
+      <tr>
+        <td>1991-92</td>
+        <td>33</td>
+        <td>No</td>
+      </tr>
+    </tbody>
+  </table>
+  <br>
+  <ul>
+    <li>1983 - 1984 Chicago Bulls</li>
+    <li class="amarillo">1995 - 1999 chicago Bulls</li>
+    <li>2001 - 2003 Washington Wizards</li>
+    <li class="amarillo">2005 - 2008 Miami Dolphins</li>
+    <li>2010 - 2015 Los Angeles Lakers</li>
+  </ul>
+  <p><a href="https://www.youtube.com/watch?v=cuLprHh_BRg" target="_blank">Haga click acá para ver un video</a></p>
+  <h3>Por favor conteste esta breve encuesta</h3>
+  <form>
+    <div>
+      <label for="email">Email:</label>
+      <input type="email" name="email" id="email">
+    </div>
+    <br>
+    <div>
+      <input type="radio" name="quiere-mail"> Sí, quiero recibir novedades por mail
+      <input type="radio" name="quiere-mail"> No, no quiero recibir novedades por mail
+    </div>
+    <br>
+    <input type="submit" value="Enviar">
+
+  </form>
+</body>
+</html>
