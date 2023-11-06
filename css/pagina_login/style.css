@@ -1,0 +1,28 @@
+h1 {
+  text-align: center;
+}
+.cajas {
+  background-color: purple;
+}
+
+.caja {
+  width: 200px;
+  background-color: grey;
+  display: inline-block;
+  vertical-align: center;
+}
+.caja img {
+  width: 100%;
+}
+.caja-medio {
+  background-color: green;
+}
+#menu {
+  text-align: center;
+}
+#menu li {
+  color: crimson;
+  text-decoration: underline;
+  display: inline-block;
+}
+
