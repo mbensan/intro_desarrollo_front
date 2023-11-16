@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NERD</title>
+</head>
+<body>
+  <script>
+    /*
+    // 1. Preguntarle al usuario los grados celsius
+    let celsius = prompt('Escriba los grados celsius')
+    // 2. Pasarlo a números enteros
+    celsius = parseInt(celsius)
+
+    // 3. Los transformo a Kelvin
+    const kelvin = celsius + 273.15
+
+    // 4. Le aviso al usuario
+    alert('En grados Kelvin sería ' + kelvin + '°K')
+    */
+
+    // 1. Preguntarle al usuario la cantidad de días
+    let dias = prompt('Escriba los dias')
+    // 2. Pasarlo a números enteros
+    dias = parseInt(dias)
+
+    const anios = Math.floor(dias / 365)
+
+    const resto = dias % 365
+
+    const semanas = Math.floor(resto / 7)
+
+    const diasQuedan = resto % 7
+
+    // Me gustaría preguntar si ha pasado un año o no
+    if (anios > 0) {
+      console.log("Han pasado " + anios + ' años, ' + semanas + ' semanas, y '+ diasQuedan + ' días.')
+    }
+    else {
+      console.log("Han pasado " + semanas + ' semanas, y '+ diasQuedan + ' días.')
+    }
+
+    
+    
+
+ 
+  </script>
+</body>
+</html>

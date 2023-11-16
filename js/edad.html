@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EDAD</title>
+</head>
+<body>
+  <script>
+    const edad = parseInt(prompt('Ingrese su edad'))
+    // edad = 63
+    if (edad < 18) {
+      console.log("Usted no puede votar")
+    }
+    else if (edad <= 60) {
+      console.log("Usted si puede votar");
+    }
+    else {
+      console.log("Usted si puede votar, y además se salta la fila");
+    }
+
+    // Ejemplo de ciclo infinito
+    const palabraSecreta = 'monitor'
+    while (true) {
+      const palabraUsuario = prompt('Ingrese la palabra secreta: ')
+      
+      if (palabraSecreta == palabraUsuario) {
+        alert('Le achunto')
+        // Ahora que le achuntó, tenemos que romper el ciclo infinito
+        break
+      }
+      else {
+        alert('ERROR!')
+      }
+
+    }
+
+    console.log("Bienvenido/a a la Caverna Secreta")
+
+    </script>
+  </script>
+</body>
+</html>
