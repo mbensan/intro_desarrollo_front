@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Juega al Cachipun</h1>
+  <script>
+    while (true) {
+
+      // 1. Le pedimos al usuario que ingrese una jugada
+      const jugador = prompt('Ingrese una jugada. 0 para piedra, 1 para papel, y 2 para tijera, cualquier otra tecla para salir')
+  
+      // 2. Creamos la jugada de la máquina
+      let computador = Math.random() * 3 // valor que va desde el 0 al 2.999999
+  
+      // 3. Le sacamos los decimales a computador
+      computador = Math.floor(computador)
+  
+      // 4. Transformamos a computador en una variable del tipo texto}
+      computador = '' + computador
+  
+      // Si el jugador elije piedra
+      if (jugador == '0') {
+        if (computador == '0') {
+          console.log('Un empate, ambos eligieron PIEDRA')
+        }
+        else if (computador == '1') {
+          console.log("Perdiste con PIEDRA contra PAPEL")
+        }
+        else {
+          console.log("Ganaste con PIEDRA contra TIJERAS")
+        }
+      }
+      else if (jugador == '1') {
+        if (computador == '0') {
+          console.log('Ganaste con PAPEL contra PIEDRA')
+        }
+        else if (computador == '1') {
+          console.log("Empataron. Ambos eligieron PAPEL")
+        }
+        else {
+          console.log("Perdiste con PAPEL contra TIJERAS")
+        }
+      }
+      else if (jugador == '2') { 
+        if (computador == '0') {
+          console.log('Perdiste con TIJERAS contra PIEDRA')
+        }
+        else if (computador == '1') {
+          console.log("Ganaste con TIJERAS contra PAPEL")
+        }
+        else {
+          console.log("Empataron ambos con TIJERAS")
+        }
+      }
+      else {
+        console.error('Se equivoco lo hizo maaaal!')
+        break
+      }
+
+
+    }
+
+    function calcular_cuota (monto, tasa, meses) {
+      const cuota = (monto * tasa) / (1 - (1 + tasa) ** (-1 * meses))
+      return cuota
+    }
+
+    const cuota = calcular_cuota(10000000, 0.02, 36)
+
+    console.log('La cuota para 10 millones, a un 2%, en 36 meses, es de: ' + cuota)
+
+  </script>
+</body>
+</html>
