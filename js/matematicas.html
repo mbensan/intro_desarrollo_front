@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div>
+    Matemática simple. En este ejercicio deberás crear:
+
+    Una función que se llame triplicador que tome un número como input (osea, como Parámetro) y retorne el triple de ese valor.
+    Una función multiplicador que tome dos números como Parámetros y devuelva el producto de los dos.
+    Una función división que tome dos números como Parámetros y devuelva el resultado de dividir el primero por el segundo.
+    Una función resto que tome dos números como Parámetros y devuelva el resultado del módulo del primero sobre el segundo.
+    Por último, calcula el valor de triplicar 5, luego multiplicar eso por 12, dividir por 12 y encontrar el resto de dividir eso en 3.
+  Importante: Use solamente las funciones que escribiste antes, sin otros operadores.
+  </div>
+  <script>
+    const triplicador = num => num * 3
+    
+    function multiplicador (num1, num2) {
+      return num1 * num2
+    }
+    function division (num1, num2) {
+      return num1 / num2
+    }
+    function resto (num1, num2) {
+      return num1 % num2
+    }
+
+    resto(division(multiplicador( triplicador(5), 12), 12), 3)
+
+    const mensajes = [
+      'Hola Curso',
+      18,
+      function (x) {return x**2},
+      [2,3,5],
+      true
+    ]
+    const nombres = ['Miguel Angel', 'Donatello', 'Rafael', 'Leonardo']
+
+    function saludar (nombres) {
+      // for (INICIO; COND; INCR) {  }
+      for (let i=0; i < nombres.length; i++) {
+        console.log('Hola ' + nombres[i]);
+      }
+    }
+
+    // for (let i=100; i>=-100; i-=7) {
+    //   console.log(i)
+    // }
+    const html = ['Pedro','Juan','Ana', 'Peter', 'David']
+    const css = ['Luis','Juan', 'Ana','María', 'Peter', 'Javier']
+
+    function get_repetidos (arr1, arr2) {
+      const repetidos = []
+      // 1. Recorremos el arreglo "html"
+      for (let i=0; i<arr1.length; i++) {
+        // cada elemento es el que esta en la posición i
+        // 2. Lo comparamos con todos los elementos del arreglo "css"
+        for (let j=0; j<arr2.length; j++) {
+          // 3. Si detectamos alguna igualdad, esa persona esta repetida
+          if (arr1[i] == arr2[j]) {
+            repetidos.push(arr1[i])
+            break
+          }
+        }
+      }
+      return repetidos
+    }
+
+    function get_repetidos2 (arr1, arr2) {
+      const repetidos = []
+      for (let i=0; i<arr1.length; i++) {
+        if (arr2.indexOf(arr1[i]) >= 0) {
+          repetidos.push(arr1[i])
+        }
+      }
+      return repetidos
+    }
+
+    function fibonacci (pos) {
+      // caso base
+      if (pos == 0 || pos == 1) {
+        return pos
+      }
+      // caso genérico
+      return fibonacci(pos-1) + fibonacci(pos-2)
+    }
+  </script>
+</body>
+</html>
