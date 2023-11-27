@@ -42,6 +42,24 @@
         }
       }
       dibujar_animales()
+
+      function separar (arr) {
+        const pares = []
+        const impares = []
+
+        for (let i=0; i<arr.length; i++) {
+          const elemento = arr[i]
+
+          // chequeamos si es un número par
+          if (elemento % 2 == 0) {
+            pares.push(elemento)
+          }
+          else {
+            impares.push(elemento)
+          }
+        }
+        return [pares, impares]
+      }
     </script>
   </body>
 </html>
