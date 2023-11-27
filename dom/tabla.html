@@ -1,0 +1,70 @@
+<html>
+
+<head>
+  <meta charset=utf-8 />
+  <title>Insert row in a table - w3resource</title>
+</head>
+
+<body>
+  <table id="sampleTable">
+    <tr>
+      <td>Row1 cell1</td>
+      <td>Row1 cell2</td>
+    </tr>
+    <tr>
+      <td>Row2 cell1</td>
+      <td>Row2 cell2</td>
+    </tr>
+  </table>
+  <br>
+  <input type="button" onclick="insert_row()" value="Insert row">
+  <script>
+    // agregar border, padding, color de fondo, esq, redondeadas
+    const tabla = document.querySelector('#sampleTable')
+
+    function init () {
+      console.log(tabla);
+      // 1. Color de fondo
+      tabla.style['background-color'] = 'deepskyblue'
+      // 2. Padding
+      tabla.style.padding = '1rem'
+      // 3. Borde
+      tabla.style.border = '2px solid black'
+      // 4. Esq. Redondeadas
+      tabla.style['border-radius'] = '10px'
+      // 5. Borde a ls TD's
+      const tds = document.querySelectorAll('td')
+      for (let i=0; i<tds.length; i++) {
+        tds[i].style.border = '1px solid black'
+      }
+    }
+    init()
+
+    const nombres = [
+      "Isabella	Daniel",
+      "Olivia	David",
+      "Alexis	Gabriel",
+      "Sofía	Benjamín",
+      "Victoria	Samuel",
+      "Amelia	Lucas",
+      "Alexa	Ángel",
+      "Julia	José",
+      "Camila	Adrián",
+      "Alexandra	Sebastián",
+      "Maya	Xavier"
+    ]
+
+    function insert_row () {
+      const nombre_azar = nombres[Math.floor(Math.random()*nombres.length)]
+      const nueva_fila = `
+        <tr>
+          <td>`+nombre_azar+`</td>
+          <td>Su edad</td>
+        </tr>
+      `
+      tabla.innerHTML += nueva_fila
+    }
+  </script>
+</body>
+
+</html>
