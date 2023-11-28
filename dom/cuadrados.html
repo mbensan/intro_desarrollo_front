@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset=utf-8 />
+  <title>Remove items from a dropdown list</title>
+  <style>
+    #cuadrados {
+      border: 2px solid black;
+      padding: 1rem;
+    }
+    #cuadrados div {
+      width: 3rem;
+      height: 3rem;
+      display: inline-block;
+      background-size: contain;
+    }
+  </style>
+</head>
+
+<body>
+  <form> 
+    <select id="colorSelect">
+      <option value="red">red</option>
+      <option value="yellow">yellow</option>
+      <option value="burlywood">burlywood</option>
+      <option value="black">black</option>
+      <option value="random">Al Azar</option>
+    </select> 
+    <input type="button" onclick="addColor()"  value="Add Color">
+  </form>
+  <div id="cuadrados">
+    <div style="background-color: blue;" ondblclick="eliminar(event)"></div>
+  </div>
+  <script>
+    // CALLBACK
+    function addColor () {
+      const colorSelect = document.querySelector('#colorSelect')
+      const cuadrados = document.querySelector('#cuadrados')
+
+      let colorSeleccionado = colorSelect.value
+      if (colorSeleccionado == 'random') {
+        const red = Math.floor(Math.random() * 255)
+        const green = Math.floor(Math.random() * 255)
+        const blue = Math.floor(Math.random() * 255)
+        
+        colorSeleccionado = 'rgb('+red+','+green+','+blue+')'
+      }
+
+      cuadrados.innerHTML += '<div style="background-color: '+colorSeleccionado+'" ondblclick="eliminar(event)" onmouseover="poner_fiu(event)" onmouseleave="sacar_fiu(event)"></div>'
+    }
+
+    function eliminar (event) {
+      console.log(event.target)
+      event.target.remove()
+    }
+
+    function poner_fiu (event) {
+      // 1. Primero vemos que cuadrado recibió el evento
+      const cuadrado = event.target
+      cuadrado.style['background-image'] = 'url(fiu.jpg)'
+    }
+    
+    function sacar_fiu (event) {
+      // 1. Primero vemos que cuadrado recibió el evento
+      const cuadrado = event.target
+      cuadrado.style['background-image'] = 'none'
+    }
+  </script>
+</body>
+
+</html>
