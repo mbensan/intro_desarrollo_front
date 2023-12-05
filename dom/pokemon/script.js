@@ -31,8 +31,10 @@ async function mostrar_detalle(pokemon_id) {
   // 2. Desempaquetamos los datos
   const pokemon = await resp.json()
 
+  // 3. Agregamos la imagen del pokemon
+  poke_img.setAttribute('src', pokemon.sprites.front_shiny)
 
-
+  // 4. Agregamos los datos del pokemon
   poke_nombre.innerHTML = pokemon.name
   poke_tipo.innerHTML = pokemon.types[0].type.name
   poke_peso.innerHTML = pokemon.weight
